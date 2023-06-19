@@ -21,5 +21,5 @@ with open("Input/Letters/starting_letter.txt") as r:
     letter_template = r.read()
     for name in guest_list:
         new_letter = letter_template.replace("[name]", name)
-        with open(f"Output/ReadyToSend/{name}", "w") as person:
+        with open(f"Output/ReadyToSend/letter_for_{name}.txt", "w") as person:
             person.write(new_letter)
